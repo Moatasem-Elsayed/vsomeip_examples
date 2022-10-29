@@ -1,0 +1,27 @@
+{
+    "applications": [
+        {
+            "name": "test",
+            "id": "0x600A"
+        }
+    ],
+    "security": {
+        "policies": [
+            {
+                "client": "0x600A",
+                "credentials": {
+                    "uid": "1000",
+                    "gid": "1000"
+                },
+                "allow": {
+                    "requests": [
+                        {
+                            "service": "0xDAE",
+                            "instance": "0x1"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

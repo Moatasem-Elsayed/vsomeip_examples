@@ -1,0 +1,38 @@
+{
+    "unicast": "local",
+    "logging": {
+        "level": "debug",
+        "console": "true",
+        "file": {
+            "enable": "false",
+            "path": "/var/log/vsomeip.log"
+        },
+        "dlt": "false"
+    },
+    "applications": [
+        {
+            "name": "test_service",
+            "id": "0x600A"
+        }
+    ],
+    "security": {
+        "policies": [
+            {
+                "client": "0x600A",
+                "credentials": {
+                    "uid": "1000",
+                    "gid": "1000"
+                },
+                "allow": {
+                    "offers": [
+                        {
+                            "service": "4660",
+                            "instance": "22136"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "routing": "test_service"
+}
